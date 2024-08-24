@@ -1,0 +1,78 @@
+/* ====================General==================== */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	font-weight: 600;
+}
+
+body {
+	font-family: "Arvo", cursive;
+	font-size: 3.2rem;
+	line-height: 1.6;
+	color: #dbedf3;
+	background-color: #283149;
+	background-color: #22262e;
+	min-height: 100vh;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	gap: 6rem;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+/* ====================Content==================== */
+.set {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 6rem 2rem;
+}
+
+.drum {
+	font-family: inherit;
+	font-weight: 900;
+	font-size: 6.8rem;
+	width: 15rem;
+	height: 15rem;
+	color: #d78c1a;
+	background-color: white;
+	border: 1rem solid #ff4400df;
+	border-radius: 1.2rem;
+	outline: none;
+	box-shadow: 0 0.4rem 1.2rem #c88e36c9;
+	text-shadow: 0.6rem 0.3rem #333;
+	text-transform: uppercase;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	cursor: grab;
+}
+
+.pressed {
+	box-shadow: 0 0.2rem 0.6rem #c88e369d;
+	transform: translateY(0.3rem);
+	opacity: 0.5;
+	cursor: grabbing;
+}
+
+/* ====================Media Query Responsive========== */
+@media only screen and (max-width: 600px) {
+	html {
+		font-size: 40%;
+	}
+
+	body {
+		font-size: 2.4rem;
+	}
+}

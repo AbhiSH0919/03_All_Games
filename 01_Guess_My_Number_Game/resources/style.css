@@ -1,0 +1,190 @@
+/* ====================General==================== */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: sans-serif;
+	font-weight: 300;
+	color: #555;
+	color: #fff;
+	background-color: #333;
+	line-height: 1.4;
+	overflow-x: hidden;
+}
+
+section {
+	width: 100vw;
+	height: 100vh;
+	padding: 2.5rem 0;
+	display: flex;
+	justify-content: center;
+	/*align-items: center;*/
+}
+
+/* ====================Layout==================== */
+.game_container {
+	font-size: 1.8rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 2rem;
+}
+.heading_main {
+	font-size: 3.6rem;
+}
+.heading_sub {
+	font-size: 1.6rem;
+	font-weight: 100;
+}
+
+.target {
+	width: 10rem;
+	height: 10rem;
+	font-size: 6.8rem;
+	color: #c98226;
+	background-color: #faebd7f2;
+	margin: 2.5rem auto;
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	/* when setting a pseduo element position with z-index must be do not set parent ele z-index only posi:rela; */
+}
+.target::before {
+	display: block;
+	content: "";
+	width: 100vw;
+	height: 0.5rem;
+	background-color: #0682ee;
+	background-color: #c98226;
+	background-color: #faebd799;
+	position: absolute;
+	z-index: -1;
+}
+
+.input {
+	width: 10rem;
+	font-size: 2.4rem;
+	font-weight: bolder;
+	color: #c98226;
+	padding: 0.5rem;
+	border: 2px solid #c98e22;
+	border-radius: 0.3rem;
+	text-align: center;
+	outline: none;
+}
+
+/* ====================Buttons==================== */
+.check_guess,
+.play_again-btn,
+.play_next-btn {
+	font-size: 1.8rem;
+	color: #c98226;
+	padding: 1.2rem 1.8rem;
+	border: 2px solid #c98e22;
+	border-radius: 0.6rem;
+	/*text-transform: uppercase;*/
+	font-variant-caps: petite-caps;
+	box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+	text-align: center;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.check_guess:hover,
+.play_again-btn:hover,
+.play_next-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.6);
+}
+.check_guess:active,
+.play_again-btn:active,
+.play_next-btn:active {
+	transform: translateY(0);
+	box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+}
+.play_next-btn,
+.play_again-btn {
+	padding: 1rem 1.6rem;
+	display: none;
+}
+
+/* ====================Context==================== */
+.user_guesses {
+	font-size: 1.6rem;
+	margin-top: 2rem;
+}
+.score-box {
+	font-size: 2.6rem;
+	color: #e67e22;
+	list-style: none;
+}
+.score-box li:last-child {
+	font-size: 2rem;
+	color: #d1db14;
+}
+
+.love {
+	color: #fff;
+	font-size: 1.8rem;
+	font-style: normal;
+}
+.love span {
+	display: inline-block;
+	padding: 0 2px;
+}
+.love svg {
+	margin-bottom: -5px;
+}
+
+.heart_icon {
+	color: red;
+	width: 2.2rem;
+	height: auto;
+}
+
+/* ====================Animations==================== */
+.animation {
+	animation: scale-up 2s infinite linear;
+}
+
+@keyframes scale-up {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.3);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.shake {
+	animation: shake 0.1s;
+}
+
+@keyframes shake {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(-12px);
+	}
+	100% {
+		transform: translateX(12px);
+	}
+}

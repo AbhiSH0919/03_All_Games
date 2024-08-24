@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Simon Game</title>
+  <link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="resources/css/style.css" />
+</head>
+
+<body>
+
+  <section>
+    <div class="row">
+      <h1 class="play-level --js-gameLevel">" The Simon Game "</h1>
+    </div>
+
+    <div class="containar">
+
+      <div class="color-btns">
+        <audio src="resources/sounds/green.mp3" class="--js-colorAudio"></audio>
+        <button class="btn-green color-btn --js-color-btn"></button>
+
+        <audio src="resources/sounds/red.mp3" class="--js-colorAudio"></audio>
+        <button class="btn-red color-btn --js-color-btn"></button>
+
+        <audio src="resources/sounds/yellow.mp3" class="--js-colorAudio"></audio>
+        <button class="btn-yellow color-btn --js-color-btn"></button>
+
+        <audio src="resources/sounds/blue.mp3" class="--js-colorAudio"></audio>
+        <button class="btn-blue color-btn --js-color-btn"></button>
+      </div>
+
+      <div class="bg-circle">
+        <audio src="resources/sounds/wrong.mp3" class="--js-wrongAudio"></audio>
+        <button class="main-circle --js-startGame">Start</button>
+      </div>
+
+    </div>
+
+    <h2 class="play-note --js-gameMsg">
+      Let's Play have a Fun! <br />
+      Incries your brain power
+    </h2>
+  </section>
+  <script src="resources/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="resources/css/style.css" />
+    <link rel="shortcut icon" href="resources/images/dice-6.png" type="image/x-icon" />
+    <title>Pig Game</title>
+</head>
+
+<body>
+    <main>
+        <section class="home">
+            <!-- ==============================Bot Play Box============================== -->
+            <div class="game-1">
+                <div class="game-box">
+                    <picture>
+                        <source srcset="resources/images/bot-mobile.jpg" media="(max-width:600px)">
+
+                        <img class="game-img" src="resources/images/bot-desktop.jpg" alt="">
+                    </picture>
+
+                    <button class="btn --js-bot">Play</button>
+                </div>
+            </div>
+
+            <!-- ==============================Players Play Box============================== -->
+            <div class="game-2">
+                <div class="game-box">
+                    <picture>
+                        <source srcset="resources/images/player-mobile.jpg" media="(max-width:600px)">
+
+                        <img class="game-img" src="resources/images/player-desktop.jpg" alt="">
+                    </picture>
+
+                    <button class="btn --js-player">Play</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="resources/js/script.js"></script>
+</body>
+
+</html>

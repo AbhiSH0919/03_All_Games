@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="../../css/game.css" />
+  <link rel="stylesheet" href="../../css/gameResponsive.css" />
+  <link rel="shortcut icon" href="../../images/dice-6.png" type="image/x-icon" />
+  <title>Pig Game</title>
+</head>
+
+<body>
+  <main>
+    <!-- ==============================Player Play Box===================== -->
+    <section class="player player--0 player--active">
+      <h2 class="name" id="name--0">Player</h2>
+      <p class="score" id="score--0">0</p>
+      <div class="current">
+        <p class="current-label">Current</p>
+        <p class="current-score" id="current--0">0</p>
+      </div>
+    </section>
+
+    <!-- ==============================Bot Play Box======================== -->
+    <section class="player player--1">
+      <h2 class="name" id="name--1">ghost 👻</h2>
+      <p class="score" id="score--1">0</p>
+      <div class="current">
+        <p class="current-label">Current</p>
+        <p class="current-score" id="current--1">0</p>
+      </div>
+    </section>
+
+    <!-- ==============================Dice Img & Buttons================== -->
+    <audio src="../../audio/diceRoll.mp3" class="diceSound"></audio>
+    <img src="../../images/dice-1.png" alt="Playing dice" class="dice" />
+    <button class="btn btn--new">🔄 Restart Game</button>
+    <button class="btn btn--roll">🎲 Roll dice</button>
+    <button class="btn btn--hold">📥 Hold</button>
+    <button class="btn help">❓</button>
+    <button class="btn back">&larr;</button>
+
+    <!-- ==============================Note Section================== -->
+    <section class="playSection">
+      <h2 class="name">Playing...🎲</h2>
+      <ol>
+        <li class="rule">
+          The current score will be updated after the dice are rolled and the
+          main score will be updated after the player changes...💞
+        </li>
+
+        <li class="rule">
+          There are 3 chances to roll the dice each time...🎲
+        </li>
+        <li class="rule">
+          Hold button can be pressed anytime between 3 chances...👍
+        </li>
+        <li class="rule">
+          After 3 chances & pressing the hold button the player will change
+          automatically...🔄
+        </li>
+        <li class="rule">
+          Player will change automatically after 1 number of dice falls...🎲
+        </li>
+        <li class="rule">
+          If the dice roll is 1 then the current score will be 0 and the main
+          score will remain the same...🤩
+        </li>
+        <li class="rule">
+          While the ghost👻 is playing, all other buttons except the New Game
+          button will be disabled...❌
+        </li>
+
+        <li class="rule">
+          The first player to score 20 will win the game...🏆
+        </li>
+      </ol>
+      <button class="btn btn--next" autofocus>Next &rarr;</button>
+
+    </section>
+  </main>
+
+  <script src="../../js/botPlay.js"></script>
+</body>
+
+</html>

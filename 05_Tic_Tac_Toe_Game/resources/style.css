@@ -1,0 +1,85 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #444;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+/* ==========Container========== */
+.container {
+	width: 300px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: #333;
+	background-color: #4a4e4d;
+	border: none;
+}
+
+.box {
+	font-size: 3rem;
+	height: calc(100% / 3);
+	width: calc(100% / 3);
+	/* background-color: aquamarine; */
+	border: 1px solid red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: grab;
+}
+
+.players {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+/* ==========Buttons========== */
+.btn {
+	display: inline-block;
+	font-size: 1.2rem;
+	text-transform: capitalize;
+	color: #333;
+	width: max-content;
+	height: auto;
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.players button {
+	padding: 0.4rem 1.6rem;
+	margin: 1rem;
+	border-radius: 0.3rem;
+	cursor: default;
+}
+
+.players .playerOne {
+	background-color: #fff;
+}
+
+.players .playerTwo {
+	background-color: #aaa;
+}
+
+/* ==========Media Query Responsive========== */
+@media only screen and (max-width: 360px) {
+	.container {
+		width: 250px;
+		height: 250px;
+	}
+}

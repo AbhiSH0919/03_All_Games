@@ -1,0 +1,201 @@
+/* --------------------------General-------------------------- */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Rye", cursive;
+	background-color: rgb(197, 218, 201);
+	padding: 10px;
+	text-align: center;
+	user-select: none;
+}
+::selection {
+	user-select: none;
+}
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+.play-level {
+	font-size: 36px;
+	color: rgba(235, 178, 22, 0.801);
+	margin: 9px auto;
+	text-shadow: 0 2px 1px rgb(255, 255, 255);
+}
+
+.containar {
+	max-width: 420px;
+	height: auto;
+	background-color: rgba(255, 255, 255, 0.315);
+	padding: 11px;
+	margin: 10px auto;
+	border: 1px solid rgb(148, 134, 134);
+	border-radius: 100%;
+	position: relative;
+}
+
+/* --------------------------Color Buttons-------------------------- */
+
+.color-btns {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+}
+
+.btn-green {
+	background-color: #0eb273;
+	border-top-left-radius: 100%;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.601),
+		inset -1px -1px 1px rgba(0, 0, 0, 0.601), -1px -1px 8px rgba(0, 0, 0, 0.601),
+		-1px -1px 8px #666;
+}
+
+.btn-red {
+	background-color: #fa0000;
+	border-top-right-radius: 100%;
+	box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.601),
+		inset 1px -1px 1px rgba(0, 0, 0, 0.601), 1px -1px 8px rgba(0, 0, 0, 0.601),
+		1px -1px 8px #666;
+}
+
+.btn-yellow {
+	background-color: #fafa11;
+	border-bottom-left-radius: 100%;
+	box-shadow: 1px -1px 2px rgba(0, 0, 0, 0.601),
+		inset -1px 1px 1px rgba(0, 0, 0, 0.601), -1px 1px 8px rgba(0, 0, 0, 0.601),
+		-1px 1px 8px #666;
+}
+
+.btn-blue {
+	background-color: #2893fe;
+	border-bottom-right-radius: 100%;
+	box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.601),
+		inset 1px 1px 1px rgba(0, 0, 0, 0.601), 1px 1px 8px rgba(0, 0, 0, 0.601),
+		-1px 1px 8px #666;
+}
+
+.color-btn {
+	display: block;
+	width: 100%;
+	max-width: 200px;
+	height: 200px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	backface-visibility: hidden;
+	transition: all 0.3s;
+}
+
+.color-btn.active {
+	box-shadow: inset 0 0 4px rgb(0, 0, 0, 0.8);
+	transform: scale(0.98);
+	filter: brightness(50%);
+}
+
+/* --------------------------Background Circle-------------------------- */
+
+.bg-circle {
+	width: 200px;
+	height: 200px;
+	background-color: rgba(255, 255, 255, 0.863);
+	border-radius: 100%;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+/* --------------------------Main Front Circle-------------------------- */
+
+.main-circle {
+	font-size: 28px;
+	letter-spacing: 2px;
+	color: #666;
+	background-color: rgb(197, 164, 204);
+	width: 175px;
+	height: 165px;
+	border: none;
+	border-radius: 100%;
+	text-shadow: 0 -2px 1px #ff0800, 0 1px 1px #03fc0f;
+	box-shadow: 0 2px 1px rgb(68, 60, 60), 0 -1px 1px rgb(24, 23, 23),
+		inset 0 -1px 1px black, inset 0 1px 1px #666;
+	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-circle:active {
+	border: 1px solid rgb(10, 10, 10);
+	text-shadow: 0 -3px 0px rgb(255, 255, 255);
+}
+
+/* --------------------------Play & Levels-------------------------- */
+
+.play-note {
+	font-size: 32px;
+	color: darkmagenta;
+	text-shadow: 0 -3px 1px white;
+}
+
+/* --------------------------Media Query Responsive-------------------------- */
+
+@media only screen and (max-width: 400px) {
+	.play-level {
+		font-size: 26px;
+	}
+
+	.color-btn {
+		height: 160px;
+	}
+
+	.bg-circle {
+		width: 160px;
+		height: 160px;
+	}
+
+	.main-circle {
+		font-size: 28px;
+		width: 140px;
+		height: 135px;
+	}
+
+	.play-note {
+		font-size: 22px;
+	}
+}
+
+/* --------------------------js color button class-------------------------- */
+/* 
+.glow-gr {
+  background-color: #00ff7f;
+}
+
+.glow-rd {
+  background-color: #ff0800;
+}
+
+.glow-yl {
+  background-color: #fafa37;
+}
+
+.glow-bl {
+  background-color: #0000ff;
+}
+
+.hidden {
+  opacity: 0;
+} */

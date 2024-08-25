@@ -11,7 +11,7 @@ A simple and responsive Tic Tac Toe game built using HTML, CSS, and JavaScript. 
 ### How to Play
 
 1. Open the game.
-2. Player 1 uses "X" and Player 2 uses "O".
+2. Player 1 uses "O" and Player 2 uses "X".
 3. Players take turns clicking on the grid to place their symbol.
 4. The first player to align three of their symbols horizontally, vertically, or diagonally wins.
 5. If all nine squares are filled without a winner, the game end.
